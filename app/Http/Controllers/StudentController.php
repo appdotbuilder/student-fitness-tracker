@@ -50,9 +50,8 @@ class StudentController extends Controller
         
         $student = Student::create($validated);
 
-        // Return to same page with success message
         return redirect()->route('students.index')
-            ->with('success', "✅ {$student->name}'s fitness level calculated successfully! Score: {$fitnessScore}/100 ({$fitnessLevel})");
+            ->with('success', 'Student fitness data recorded successfully.');
     }
 
     /**
